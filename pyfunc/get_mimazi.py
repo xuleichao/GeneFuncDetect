@@ -10,9 +10,16 @@ import pandas as pd
 import numpy as np
 from pandas import DataFrame
 
+def load_mimazi(path=main_path+'/knowledge/anji_mimazi.txt'):
+    rslt_dct = {}
+    f = open(path, 'r', encoding='utf-8').readlines()
+    data = [i.strip().split('\t') for i in f]
+    for i in data:
+        rslt_dct[i[1]] = i[0]
+    return rslt_dct
 
 if __name__ == '__main__':
-    knowledge = pd.read_excel('../kownledge/氨基酸介绍及密码子.xlsx', sheetname=0)
+    knowledge = pd.read_excel('../knowledge/氨基酸介绍及密码子.xlsx', sheetname=0)
     kg_lst = np.array(knowledge).tolist() #转化为列表
     head_dct = [] # 获取第二个碱基
     for i in range(1, len(kg_lst[0])-1):
@@ -31,7 +38,7 @@ if __name__ == '__main__':
             mimazi = first + s_mima + last
             sub_rslt = anji[j] + '\t' + mimazi
             anji_mima.append(sub_rslt)
-    f = open('../kownledge/anji_mimazi.txt', 'w', encoding='utf-8')
+    f = open('../knowledge/anji_mimazi.txt', 'w', encoding='utf-8')
     for i in anji_mima:
         f.write(i + '\n')
     f.close()

@@ -1,0 +1,7 @@
+# DNA 碱基对应
+[DNA]
+relation={"A": "T", "T": "A", "G": "C", "C": "G"}
+
+# RNA 碱基对应
+[RNA]
+relation={"A": "U", "U": "A", "G": "C", "C": "G", "T": "A"}
