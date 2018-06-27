@@ -11,6 +11,7 @@ import json
 from get_configure import get_configure
 config = get_configure()
 from get_mimazi import load_mimazi
+from get_mimazi import load_name
 
 def DNA2RNA(gene_str, D_A='DNA'):
     gene_str = gene_str.upper()
@@ -38,8 +39,21 @@ def split_seq(gene_str):
 
 def RNA2protein(gene_str):
     protein = load_mimazi()
-    return protein[gene_str]
+    return protein[DNA2RNA(gene_str, 'RNA')]
 
+def DNA2protein(gene_sq, to_sx=False):
+    # to_sx 转化为缩写字母
+    DNA_string = gene_sq.upper()
+    gene_sq = split_seq(DNA_string)
+    gene_lst = [DNA2RNA(i, 'RNA') for i in gene_sq]
+    protein_lst = [RNA2protein(i) for i in gene_lst]
+    if to_sx == False:
+        return protein_lst
+    else:
+        chi_sx = load_name()[0]
+        protein_lst = [chi_sx[i] for i in protein_lst]
+        return protein_lst
+    
 if __name__ == '__main__':
     DNA_string = 'agtctg'
     gene_sq = split_seq(DNA_string)

@@ -18,6 +18,20 @@ def load_mimazi(path=main_path+'/knowledge/anji_mimazi.txt'):
         rslt_dct[i[1]] = i[0]
     return rslt_dct
 
+def load_name():
+    knowledge = pd.read_excel('../knowledge/氨基酸介绍及密码子.xlsx', sheetname=1)
+    df = knowledge[['中文名称', '符号与缩写']]
+    chi_sx = {}
+    sx_chi = {}
+    df_lst = np.array(df).tolist()
+    for i in df_lst:
+        chi_name = i[0].replace('\xa0', '')
+        suoxie = i[1].replace('\xa0', ' ').strip()
+        suoxie = suoxie.split(' 或 ')[0]
+        chi_sx[chi_name] = suoxie
+        sx_chi[suoxie] = chi_name
+    return chi_sx, sx_chi
+    
 if __name__ == '__main__':
     knowledge = pd.read_excel('../knowledge/氨基酸介绍及密码子.xlsx', sheetname=0)
     kg_lst = np.array(knowledge).tolist() #转化为列表
