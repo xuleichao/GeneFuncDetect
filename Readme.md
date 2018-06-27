@@ -16,5 +16,5 @@
  
 ## 配置
  - config/config.txt 配置文件
- - pyfunc Python 函数
+ - pyfunc Python函数
  - kownledge 知识数据
