@@ -13,3 +13,8 @@
  - 找一个已经确定功能的基因片段进行转录
 4. 基因数据
  - [NCBI](https://www.ncbi.nlm.nih.gov/)
+ 
+## 配置
+ - config/config.txt 配置文件
+ - pyfunc Python 函数
+ - kownledge 知识数据
