@@ -33,3 +33,8 @@
 ### 进度
  - 20180627	DNA 到氨基酸序列的实现，并验证结果
  - 20180629 氨基酸序列到蛋白质结构的实现方法
+ - 20180701 CesA protein CesA 基因族控制纤维素合成酶的合成
+	- [拟南芥数据库TAIR](http://www.arabidopsis.org/)
+	- [水稻数据库Rice Genome](http://rice.plantbiology.msu.edu/index.shtml)
+	- [在线基因结构显示系统GSDS](http://gsds.cbi.pku.edu.cn)
+	- [蛋白质结构分析SMART](http://smart.emblheidelberg.de/)
