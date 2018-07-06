@@ -38,3 +38,5 @@
 	- [水稻数据库Rice Genome](http://rice.plantbiology.msu.edu/index.shtml)
 	- [在线基因结构显示系统GSDS](http://gsds.cbi.pku.edu.cn)
 	- [蛋白质结构分析SMART](http://smart.emblheidelberg.de/)
+ - 20180706 纤维素合成酶的gromacs 计算模拟结束，用时3天
+	- [gromacs 可以做的分析](http://blog.sciencenet.cn/blog-504446-746761.html)
