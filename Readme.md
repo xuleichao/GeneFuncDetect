@@ -40,3 +40,5 @@
 	- [蛋白质结构分析SMART](http://smart.emblheidelberg.de/)
  - 20180706 纤维素合成酶的gromacs 计算模拟结束，用时3天
 	- [gromacs 可以做的分析](http://blog.sciencenet.cn/blog-504446-746761.html)
+ - 20180707（勿忘国耻） 生成回旋半径随时间变化图
+	- ![回旋半径](https://github.com/xuleichao/GeneFuncDetect/blob/master/datasets/images/%E7%BA%A4%E7%BB%B4%E7%B4%A0%E5%90%88%E6%88%90%E9%85%B6Rg.png)
