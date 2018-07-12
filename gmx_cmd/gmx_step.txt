@@ -9,7 +9,7 @@ gmx grompp -f em-sol-pme.mdp -c fws-b4em.gro -p fws.top -o em-sol.tpr
 gmx mdrun -v -deffnm em-sol
 
 gmx grompp -f nvt-pr-md.mdp -c em-sol.gro -p fws.top -o nvt-pr.tpr
-mdrun -deffnm nvt-pr
+gmx mdrun -deffnm nvt-pr
 gmx grompp -f npt-pr-md.mdp -c nvt-pr.gro -p fws.top -o npt-pr.tpr
 gmx mdrun -deffnm npt-pr
 gmx grompp -f npt-nopr-md.mdp -c npt-pr.gro -p fws.top -o npt-nopr.tpr
